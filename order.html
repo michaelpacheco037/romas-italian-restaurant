@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Roma’s original menu and try a demonstration cart with quantity controls and a subtotal.">
+    <title>Menu &amp; Ordering Demo — Roma's Pizza &amp; Italian Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="cart.js" defer></script>
+</head>
+<body data-page="order.html">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header" id="top">
+    <div class="container nav-container">
+        <a class="navbar-brand" href="index.html" aria-label="Roma's Pizza and Italian Restaurant — home">
+            <img src="images/logo.png" alt="Roma's Pizza and Italian Restaurant" width="1080" height="458">
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navigation" aria-expanded="false">
+            <span aria-hidden="true">☰</span> Menu
+        </button>
+        <nav class="navigation" id="navigation" aria-label="Main navigation">
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="promos.html">Promotions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="order" href="order.html">Explore the Menu</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main id="main-content" tabindex="-1">
+
+        <section class="page-hero menu-hero">
+            <div class="container">
+                <p class="eyebrow">A little something for everyone</p>
+                <h1>Explore the menu.</h1>
+                <p>Italian classics, familiar favorites, and an ordering demo to try.</p>
+            </div>
+        </section>
+        <nav class="menu-nav" aria-label="Menu categories">
+            <div class="container">
+                <a href="#popular">Popular</a>
+                <a href="#apps">Appetizers</a>
+                <a href="#soups">Soups &amp; Salads</a>
+                <a href="#calzone">Calzones</a>
+                <a href="#pizza">Pizza</a>
+                <a href="#pasta">Pasta</a>
+                <a href="#specials">Specialties</a>
+                <a href="#entrees">Entrees</a>
+                <a href="#subs">Subs</a>
+                <a href="#burgers">Burgers</a>
+                <a href="#desserts">Desserts</a>
+                <a href="#bevs">Beverages</a>
+                <a class="cart-jump" href="#cart-aside">View Demo Cart</a>
+            </div>
+        </nav>
+        <div class="container">
+            <p class="demo-note menu-notice">Try adding dishes to the sample cart. Prices are from the original student project; this page does not place orders or process payments.</p>
+            <noscript><p class="js-required">Enable JavaScript to try the cart. You can still browse the full menu.</p></noscript>
+        </div>
+        <div class="container menu-layout">
+            <div class="menu-content">
+                <section class="menu-section" id="popular">
+                    <h2>Popular Dishes</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/cheese-pizza.avif" alt="8&quot; Cheese Pizza" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>8&quot; Cheese Pizza</h3>
+                                <p class="menu-price">$9.99</p>
+                                <form class="add-to-cart" data-item="8-cheese-pizza-999" data-name="8&quot; Cheese Pizza" data-price="999">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of 8&quot; Cheese Pizza" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-0">Quantity of 8&quot; Cheese Pizza</label>
+                                        <input id="quantity-0" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of 8&quot; Cheese Pizza" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/tour-of-italy.avif" alt="Tour of Italy" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Tour of Italy</h3>
+                                <p class="menu-price">$18.99</p>
+                                <form class="add-to-cart" data-item="tour-of-italy-1899" data-name="Tour of Italy" data-price="1899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Tour of Italy" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-1">Quantity of Tour of Italy</label>
+                                        <input id="quantity-1" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Tour of Italy" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/chicken-parm.avif" alt="Chicken Parmigiana" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Parmigiana</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="chicken-parmigiana-1499" data-name="Chicken Parmigiana" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Parmigiana" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-2">Quantity of Chicken Parmigiana</label>
+                                        <input id="quantity-2" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Parmigiana" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/fettuccini-alfredo.avif" alt="Chicken Fettuccine Alfredo" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Fettuccine Alfredo</h3>
+                                <p class="menu-price">$15.99</p>
+                                <form class="add-to-cart" data-item="chicken-fettuccine-alfredo-1599" data-name="Chicken Fettuccine Alfredo" data-price="1599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Fettuccine Alfredo" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-3">Quantity of Chicken Fettuccine Alfredo</label>
+                                        <input id="quantity-3" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Fettuccine Alfredo" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/spaghetti.avif" alt="Spaghetti" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Spaghetti</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="spaghetti-1299" data-name="Spaghetti" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Spaghetti" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-4">Quantity of Spaghetti</label>
+                                        <input id="quantity-4" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Spaghetti" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/garlic-rolls.avif" alt="Garlic Rolls" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Garlic Rolls</h3>
+                                <p class="menu-price">$5.99</p>
+                                <form class="add-to-cart" data-item="garlic-rolls-599" data-name="Garlic Rolls" data-price="599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Garlic Rolls" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-5">Quantity of Garlic Rolls</label>
+                                        <input id="quantity-5" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Garlic Rolls" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="apps">
+                    <h2>Appetizers</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/mushrooms.jpg" alt="Appetizer Sampler" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Appetizer Sampler</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="appetizer-sampler-1299" data-name="Appetizer Sampler" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Appetizer Sampler" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-6">Quantity of Appetizer Sampler</label>
+                                        <input id="quantity-6" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Appetizer Sampler" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/calamari.avif" alt="Calamari" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Calamari</h3>
+                                <p class="menu-price">$10.99</p>
+                                <form class="add-to-cart" data-item="calamari-1099" data-name="Calamari" data-price="1099">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Calamari" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-7">Quantity of Calamari</label>
+                                        <input id="quantity-7" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Calamari" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/bruschetta.jpg" alt="Bruschetta Bread" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Bruschetta Bread</h3>
+                                <p class="menu-price">$6.99</p>
+                                <form class="add-to-cart" data-item="bruschetta-bread-699" data-name="Bruschetta Bread" data-price="699">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Bruschetta Bread" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-8">Quantity of Bruschetta Bread</label>
+                                        <input id="quantity-8" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Bruschetta Bread" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/zucchini.jpg" alt="Fried Zucchini" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Fried Zucchini</h3>
+                                <p class="menu-price">$9.99</p>
+                                <form class="add-to-cart" data-item="fried-zucchini-999" data-name="Fried Zucchini" data-price="999">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Fried Zucchini" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-9">Quantity of Fried Zucchini</label>
+                                        <input id="quantity-9" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Fried Zucchini" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/fried-cheese.jpg" alt="Fried Cheese" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Fried Cheese</h3>
+                                <p class="menu-price">$8.99</p>
+                                <form class="add-to-cart" data-item="fried-cheese-899" data-name="Fried Cheese" data-price="899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Fried Cheese" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-10">Quantity of Fried Cheese</label>
+                                        <input id="quantity-10" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Fried Cheese" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/hot-wings.jpg" alt="Hot Wings" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Hot Wings</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="hot-wings-1299" data-name="Hot Wings" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Hot Wings" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-11">Quantity of Hot Wings</label>
+                                        <input id="quantity-11" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Hot Wings" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/jalapeno.jpg" alt="Stuffed Jalapenos" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Stuffed Jalapenos</h3>
+                                <p class="menu-price">$8.99</p>
+                                <form class="add-to-cart" data-item="stuffed-jalapenos-899" data-name="Stuffed Jalapenos" data-price="899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Stuffed Jalapenos" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-12">Quantity of Stuffed Jalapenos</label>
+                                        <input id="quantity-12" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Stuffed Jalapenos" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/artichoke.jpg" alt="Fried Artichoke" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Fried Artichoke</h3>
+                                <p class="menu-price">$8.99</p>
+                                <form class="add-to-cart" data-item="fried-artichoke-899" data-name="Fried Artichoke" data-price="899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Fried Artichoke" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-13">Quantity of Fried Artichoke</label>
+                                        <input id="quantity-13" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Fried Artichoke" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/garlic-bread.avif" alt="Garlic Bread" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Garlic Bread</h3>
+                                <p class="menu-price">$4.99</p>
+                                <form class="add-to-cart" data-item="garlic-bread-499" data-name="Garlic Bread" data-price="499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Garlic Bread" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-14">Quantity of Garlic Bread</label>
+                                        <input id="quantity-14" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Garlic Bread" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="soups">
+                    <h2>Soups &amp; Salads</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/salmon-salad.avif" alt="Grilled Salmon Salad" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Grilled Salmon Salad</h3>
+                                <p class="menu-price">$18.99</p>
+                                <form class="add-to-cart" data-item="grilled-salmon-salad-1899" data-name="Grilled Salmon Salad" data-price="1899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Grilled Salmon Salad" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-15">Quantity of Grilled Salmon Salad</label>
+                                        <input id="quantity-15" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Grilled Salmon Salad" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/greek-chicken.avif" alt="Chicken Greek Salad" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Greek Salad</h3>
+                                <p class="menu-price">$13.99</p>
+                                <form class="add-to-cart" data-item="chicken-greek-salad-1399" data-name="Chicken Greek Salad" data-price="1399">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Greek Salad" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-16">Quantity of Chicken Greek Salad</label>
+                                        <input id="quantity-16" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Greek Salad" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/house-salad.avif" alt="House Salad" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>House Salad</h3>
+                                <p class="menu-price">$9.99</p>
+                                <form class="add-to-cart" data-item="house-salad-999" data-name="House Salad" data-price="999">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of House Salad" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-17">Quantity of House Salad</label>
+                                        <input id="quantity-17" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of House Salad" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/grilled-chicken-salad.webp" alt="Grilled Chicken Salad" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Grilled Chicken Salad</h3>
+                                <p class="menu-price">$13.99</p>
+                                <form class="add-to-cart" data-item="grilled-chicken-salad-1399" data-name="Grilled Chicken Salad" data-price="1399">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Grilled Chicken Salad" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-18">Quantity of Grilled Chicken Salad</label>
+                                        <input id="quantity-18" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Grilled Chicken Salad" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/caesar.jpeg" alt="Caesar Salad" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Caesar Salad</h3>
+                                <p class="menu-price">$9.99</p>
+                                <form class="add-to-cart" data-item="caesar-salad-999" data-name="Caesar Salad" data-price="999">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Caesar Salad" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-19">Quantity of Caesar Salad</label>
+                                        <input id="quantity-19" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Caesar Salad" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/greek-salad.avif" alt="Greek Salad" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Greek Salad</h3>
+                                <p class="menu-price">$9.99</p>
+                                <form class="add-to-cart" data-item="greek-salad-999" data-name="Greek Salad" data-price="999">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Greek Salad" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-20">Quantity of Greek Salad</label>
+                                        <input id="quantity-20" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Greek Salad" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/shrimp.jpg" alt="Grilled Shrimp Salad" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Grilled Shrimp Salad</h3>
+                                <p class="menu-price">$16.99</p>
+                                <form class="add-to-cart" data-item="grilled-shrimp-salad-1699" data-name="Grilled Shrimp Salad" data-price="1699">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Grilled Shrimp Salad" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-21">Quantity of Grilled Shrimp Salad</label>
+                                        <input id="quantity-21" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Grilled Shrimp Salad" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/minestrone.jpg" alt="Minestrone Soup" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Minestrone Soup</h3>
+                                <p class="menu-price">$8.99</p>
+                                <form class="add-to-cart" data-item="minestrone-soup-899" data-name="Minestrone Soup" data-price="899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Minestrone Soup" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-22">Quantity of Minestrone Soup</label>
+                                        <input id="quantity-22" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Minestrone Soup" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/basil.jpg" alt="Tomato Basil Soup" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Tomato Basil Soup</h3>
+                                <p class="menu-price">$8.99</p>
+                                <form class="add-to-cart" data-item="tomato-basil-soup-899" data-name="Tomato Basil Soup" data-price="899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Tomato Basil Soup" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-23">Quantity of Tomato Basil Soup</label>
+                                        <input id="quantity-23" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Tomato Basil Soup" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="calzone">
+                    <h2>Roma's Signature Calzones</h2>
+                    <div class="menu-details">
+                        <img src="images/calzone.jpeg" alt="A baked Italian calzone" loading="lazy">
+                        <h3>Meat Lovers</h3>
+                        <p class="muted">Ricotta and mozzarella with beef, sausage, pepperoni, and Canadian bacon.</p>
+                        <h3>Veggie Lovers</h3>
+                        <p class="muted">Ricotta, mozzarella, and mixed fresh vegetables.</p>
+                        <h3>Beef, Sausage, or Pepperoni</h3>
+                        <p class="muted">Ricotta and mozzarella with your choice of beef, sausage, or pepperoni.</p>
+                        <h3>Spinach</h3>
+                        <p class="muted">Spinach, ricotta, and mozzarella.</p>
+                        <h3>Stromboli</h3>
+                        <p class="muted">Pepperoni, mushrooms, beef, and mozzarella.</p>
+                        <p class="muted">Calzones are listed for browsing; pricing was not supplied in the original project.</p>
+                    </div>
+                </section>
+                <section class="menu-section" id="pizza">
+                    <h2>Hand-Tossed Pizza</h2>
+                    <div class="menu-details">
+                        <h3>Find the right size</h3>
+                        <ul>
+                            <li>Personal: 8-inch · 1 person</li>
+                            <li>Small: 12-inch · 1–2 people</li>
+                            <li>Medium: 14-inch · 2 people</li>
+                            <li>Large: 16-inch · 3–4 people</li>
+                            <li>Extra large: 18-inch · 4–5 people</li>
+                        </ul>
+                        <h3>Make it your own</h3>
+                        <p class="muted"><strong>Meat:</strong> Anchovies, bacon, Canadian bacon, ham, hamburger, pepperoni, salami, and sausage.</p>
+                        <p class="muted"><strong>Vegetables &amp; extras:</strong> Artichoke hearts, black olives, broccoli, fresh garlic, fresh basil, fresh tomatoes, green olives, green peppers, jalapeños, mushrooms, onions, pineapple, and spinach.</p>
+                        <p class="muted">Size and topping choices are informational in this demo. The signature pizzas below use the original sample prices.</p>
+                    </div>
+                </section>
+                <section class="menu-section" id="signature-pizza">
+                    <h2>Roma&#x27;s Signature Pizzas</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/supreme.avif" alt="Roma&#x27;s Supreme" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Roma&#x27;s Supreme</h3>
+                                <p class="menu-price">$11.95</p>
+                                <form class="add-to-cart" data-item="roma-s-supreme-1195" data-name="Roma&#x27;s Supreme" data-price="1195">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Roma&#x27;s Supreme" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-24">Quantity of Roma&#x27;s Supreme</label>
+                                        <input id="quantity-24" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Roma&#x27;s Supreme" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/margarita.avif" alt="Margarita" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Margarita</h3>
+                                <p class="menu-price">$10.95</p>
+                                <form class="add-to-cart" data-item="margarita-1095" data-name="Margarita" data-price="1095">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Margarita" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-25">Quantity of Margarita</label>
+                                        <input id="quantity-25" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Margarita" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/hawaiian.avif" alt="Hawaiian" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Hawaiian</h3>
+                                <p class="menu-price">$10.95</p>
+                                <form class="add-to-cart" data-item="hawaiian-1095" data-name="Hawaiian" data-price="1095">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Hawaiian" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-26">Quantity of Hawaiian</label>
+                                        <input id="quantity-26" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Hawaiian" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/prosciutto.jpg" alt="Prosciutto" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Prosciutto</h3>
+                                <p class="menu-price">$11.95</p>
+                                <form class="add-to-cart" data-item="prosciutto-1195" data-name="Prosciutto" data-price="1195">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Prosciutto" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-27">Quantity of Prosciutto</label>
+                                        <input id="quantity-27" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Prosciutto" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/focaccia.jpg" alt="Focaccia" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Focaccia</h3>
+                                <p class="menu-price">$10.95</p>
+                                <form class="add-to-cart" data-item="focaccia-1095" data-name="Focaccia" data-price="1095">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Focaccia" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-28">Quantity of Focaccia</label>
+                                        <input id="quantity-28" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Focaccia" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/alfredo-pizza.jpg" alt="Chicken Alfredo" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Alfredo</h3>
+                                <p class="menu-price">$10.95</p>
+                                <form class="add-to-cart" data-item="chicken-alfredo-1095" data-name="Chicken Alfredo" data-price="1095">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Alfredo" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-29">Quantity of Chicken Alfredo</label>
+                                        <input id="quantity-29" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Alfredo" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/meat-lovers.jpg" alt="Meat Lovers" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Meat Lovers</h3>
+                                <p class="menu-price">$11.95</p>
+                                <form class="add-to-cart" data-item="meat-lovers-1195" data-name="Meat Lovers" data-price="1195">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Meat Lovers" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-30">Quantity of Meat Lovers</label>
+                                        <input id="quantity-30" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Meat Lovers" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/veggie-pizza.jpg" alt="Veggie Lovers" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Veggie Lovers</h3>
+                                <p class="menu-price">$11.95</p>
+                                <form class="add-to-cart" data-item="veggie-lovers-1195" data-name="Veggie Lovers" data-price="1195">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Veggie Lovers" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-31">Quantity of Veggie Lovers</label>
+                                        <input id="quantity-31" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Veggie Lovers" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/four-cheese.jpg" alt="Four Cheese" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Four Cheese</h3>
+                                <p class="menu-price">$10.95</p>
+                                <form class="add-to-cart" data-item="four-cheese-1095" data-name="Four Cheese" data-price="1095">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Four Cheese" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-32">Quantity of Four Cheese</label>
+                                        <input id="quantity-32" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Four Cheese" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="pasta">
+                    <h2>Homemade Pasta</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/tour-of-italy.avif" alt="Tour of Italy" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Tour of Italy</h3>
+                                <p class="menu-price">$18.99</p>
+                                <form class="add-to-cart" data-item="tour-of-italy-1899" data-name="Tour of Italy" data-price="1899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Tour of Italy" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-33">Quantity of Tour of Italy</label>
+                                        <input id="quantity-33" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Tour of Italy" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/fettuccini.avif" alt="Fettuccine Alfredo" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Fettuccine Alfredo</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="fettuccine-alfredo-1299" data-name="Fettuccine Alfredo" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Fettuccine Alfredo" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-34">Quantity of Fettuccine Alfredo</label>
+                                        <input id="quantity-34" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Fettuccine Alfredo" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/meatball-parm.avif" alt="Meatball Parmigiana" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Meatball Parmigiana</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="meatball-parmigiana-1499" data-name="Meatball Parmigiana" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Meatball Parmigiana" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-35">Quantity of Meatball Parmigiana</label>
+                                        <input id="quantity-35" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Meatball Parmigiana" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/spaghetti.avif" alt="Spaghetti" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Spaghetti</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="spaghetti-1299" data-name="Spaghetti" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Spaghetti" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-36">Quantity of Spaghetti</label>
+                                        <input id="quantity-36" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Spaghetti" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/baked-ziti.avif" alt="Baked Ziti" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Baked Ziti</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="baked-ziti-1299" data-name="Baked Ziti" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Baked Ziti" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-37">Quantity of Baked Ziti</label>
+                                        <input id="quantity-37" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Baked Ziti" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/meat-ravioli.avif" alt="Meat Ravioli" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Meat Ravioli</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="meat-ravioli-1299" data-name="Meat Ravioli" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Meat Ravioli" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-38">Quantity of Meat Ravioli</label>
+                                        <input id="quantity-38" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Meat Ravioli" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/ravioli.avif" alt="Ravioli" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Ravioli</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="ravioli-1299" data-name="Ravioli" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Ravioli" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-39">Quantity of Ravioli</label>
+                                        <input id="quantity-39" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Ravioli" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/angel-hair-put.avif" alt="Angel Hair Puttanesca" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Angel Hair Puttanesca</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="angel-hair-puttanesca-1499" data-name="Angel Hair Puttanesca" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Angel Hair Puttanesca" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-40">Quantity of Angel Hair Puttanesca</label>
+                                        <input id="quantity-40" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Angel Hair Puttanesca" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/pesto-penne.jpg" alt="Pesto Penne" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Pesto Penne</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="pesto-penne-1299" data-name="Pesto Penne" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Pesto Penne" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-41">Quantity of Pesto Penne</label>
+                                        <input id="quantity-41" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Pesto Penne" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/al-pana.jpg" alt="Tortellini Al Pana" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Tortellini Al Pana</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="tortellini-al-pana-1299" data-name="Tortellini Al Pana" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Tortellini Al Pana" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-42">Quantity of Tortellini Al Pana</label>
+                                        <input id="quantity-42" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Tortellini Al Pana" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/tort.jpg" alt="Tortellini Alfredo" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Tortellini Alfredo</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="tortellini-alfredo-1299" data-name="Tortellini Alfredo" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Tortellini Alfredo" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-43">Quantity of Tortellini Alfredo</label>
+                                        <input id="quantity-43" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Tortellini Alfredo" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="specials">
+                    <h2>House Specialties</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/prima.jpg" alt="Fettuccine Primavera" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Fettuccine Primavera</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="fettuccine-primavera-1499" data-name="Fettuccine Primavera" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Fettuccine Primavera" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-44">Quantity of Fettuccine Primavera</label>
+                                        <input id="quantity-44" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Fettuccine Primavera" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/picatta.avif" alt="Chicken Picatta" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Picatta</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="chicken-picatta-1499" data-name="Chicken Picatta" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Picatta" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-45">Quantity of Chicken Picatta</label>
+                                        <input id="quantity-45" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Picatta" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/chicken-parm.avif" alt="Chicken Parmigiana" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Parmigiana</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="chicken-parmigiana-1499" data-name="Chicken Parmigiana" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Parmigiana" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-46">Quantity of Chicken Parmigiana</label>
+                                        <input id="quantity-46" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Parmigiana" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/florintini.jpg" alt="Chicken Florintini" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Florintini</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="chicken-florintini-1499" data-name="Chicken Florintini" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Florintini" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-47">Quantity of Chicken Florintini</label>
+                                        <input id="quantity-47" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Florintini" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/marsala.jpg" alt="Chicken Marsala" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Marsala</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="chicken-marsala-1499" data-name="Chicken Marsala" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Marsala" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-48">Quantity of Chicken Marsala</label>
+                                        <input id="quantity-48" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Marsala" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/cacci.jpg" alt="Chicken Cacciatore" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Cacciatore</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="chicken-cacciatore-1499" data-name="Chicken Cacciatore" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Cacciatore" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-49">Quantity of Chicken Cacciatore</label>
+                                        <input id="quantity-49" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Cacciatore" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/carchi.jpg" alt="Chicken Carchioffi" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Carchioffi</h3>
+                                <p class="menu-price">$14.99</p>
+                                <form class="add-to-cart" data-item="chicken-carchioffi-1499" data-name="Chicken Carchioffi" data-price="1499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Carchioffi" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-50">Quantity of Chicken Carchioffi</label>
+                                        <input id="quantity-50" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Carchioffi" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="entrees">
+                    <h2>Entrees</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/seafood-special.avif" alt="Seafood Special" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Seafood Special</h3>
+                                <p class="menu-price">$20.99</p>
+                                <form class="add-to-cart" data-item="seafood-special-2099" data-name="Seafood Special" data-price="2099">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Seafood Special" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-51">Quantity of Seafood Special</label>
+                                        <input id="quantity-51" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Seafood Special" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/veal-parm.avif" alt="Veal Parmigiana" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Veal Parmigiana</h3>
+                                <p class="menu-price">$15.99</p>
+                                <form class="add-to-cart" data-item="veal-parmigiana-1599" data-name="Veal Parmigiana" data-price="1599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Veal Parmigiana" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-52">Quantity of Veal Parmigiana</label>
+                                        <input id="quantity-52" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Veal Parmigiana" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/grilled-salmon.avif" alt="Grilled Salmon" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Grilled Salmon</h3>
+                                <p class="menu-price">$18.99</p>
+                                <form class="add-to-cart" data-item="grilled-salmon-1899" data-name="Grilled Salmon" data-price="1899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Grilled Salmon" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-53">Quantity of Grilled Salmon</label>
+                                        <input id="quantity-53" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Grilled Salmon" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/scampi.jpg" alt="Shrimp Scampi" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Shrimp Scampi</h3>
+                                <p class="menu-price">$15.99</p>
+                                <form class="add-to-cart" data-item="shrimp-scampi-1599" data-name="Shrimp Scampi" data-price="1599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Shrimp Scampi" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-54">Quantity of Shrimp Scampi</label>
+                                        <input id="quantity-54" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Shrimp Scampi" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/diavolo.jpg" alt="Shrimp fra Diavolo" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Shrimp fra Diavolo</h3>
+                                <p class="menu-price">$15.99</p>
+                                <form class="add-to-cart" data-item="shrimp-fra-diavolo-1599" data-name="Shrimp fra Diavolo" data-price="1599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Shrimp fra Diavolo" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-55">Quantity of Shrimp fra Diavolo</label>
+                                        <input id="quantity-55" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Shrimp fra Diavolo" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/clams&amp;shrimp.jpg" alt="Linguine Clams &amp; Shrimp" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Linguine Clams &amp; Shrimp</h3>
+                                <p class="menu-price">$18.99</p>
+                                <form class="add-to-cart" data-item="linguine-clams-shrimp-1899" data-name="Linguine Clams &amp; Shrimp" data-price="1899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Linguine Clams &amp; Shrimp" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-56">Quantity of Linguine Clams &amp; Shrimp</label>
+                                        <input id="quantity-56" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Linguine Clams &amp; Shrimp" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/lobster-ravioli.jpg" alt="Lobster &amp; Shrimp Ravioli" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Lobster &amp; Shrimp Ravioli</h3>
+                                <p class="menu-price">$18.99</p>
+                                <form class="add-to-cart" data-item="lobster-shrimp-ravioli-1899" data-name="Lobster &amp; Shrimp Ravioli" data-price="1899">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Lobster &amp; Shrimp Ravioli" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-57">Quantity of Lobster &amp; Shrimp Ravioli</label>
+                                        <input id="quantity-57" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Lobster &amp; Shrimp Ravioli" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/tilapia.jpg" alt="Grilled Tilapia" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Grilled Tilapia</h3>
+                                <p class="menu-price">$16.99</p>
+                                <form class="add-to-cart" data-item="grilled-tilapia-1699" data-name="Grilled Tilapia" data-price="1699">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Grilled Tilapia" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-58">Quantity of Grilled Tilapia</label>
+                                        <input id="quantity-58" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Grilled Tilapia" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/veal-marsala.jpg" alt="Veal Marsala" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Veal Marsala</h3>
+                                <p class="menu-price">$15.99</p>
+                                <form class="add-to-cart" data-item="veal-marsala-1599" data-name="Veal Marsala" data-price="1599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Veal Marsala" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-59">Quantity of Veal Marsala</label>
+                                        <input id="quantity-59" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Veal Marsala" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/veal-picatta.jpg" alt="Veal Picatta" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Veal Picatta</h3>
+                                <p class="menu-price">$15.99</p>
+                                <form class="add-to-cart" data-item="veal-picatta-1599" data-name="Veal Picatta" data-price="1599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Veal Picatta" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-60">Quantity of Veal Picatta</label>
+                                        <input id="quantity-60" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Veal Picatta" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/cacci.jpg" alt="Chicken Capri" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chicken Capri</h3>
+                                <p class="menu-price">$16.99</p>
+                                <form class="add-to-cart" data-item="chicken-capri-1699" data-name="Chicken Capri" data-price="1699">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chicken Capri" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-61">Quantity of Chicken Capri</label>
+                                        <input id="quantity-61" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chicken Capri" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="subs">
+                    <h2>Hot Subs</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/sausage-sub.jpg" alt="Sausage &amp; Pepper Parmigiana" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Sausage &amp; Pepper Parmigiana</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="sausage-pepper-parmigiana-1299" data-name="Sausage &amp; Pepper Parmigiana" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Sausage &amp; Pepper Parmigiana" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-62">Quantity of Sausage &amp; Pepper Parmigiana</label>
+                                        <input id="quantity-62" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Sausage &amp; Pepper Parmigiana" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/meatball-sub.jpg" alt="Meatball Parmigiana" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Meatball Parmigiana</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="meatball-parmigiana-1299" data-name="Meatball Parmigiana" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Meatball Parmigiana" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-63">Quantity of Meatball Parmigiana</label>
+                                        <input id="quantity-63" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Meatball Parmigiana" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/cheesesteak.jpg" alt="Philly Cheesesteak" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Philly Cheesesteak</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="philly-cheesesteak-1299" data-name="Philly Cheesesteak" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Philly Cheesesteak" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-64">Quantity of Philly Cheesesteak</label>
+                                        <input id="quantity-64" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Philly Cheesesteak" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="burgers">
+                    <h2>Burgers</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/og-burger.jpg" alt="The Original Burger" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>The Original Burger</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="the-original-burger-1299" data-name="The Original Burger" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of The Original Burger" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-65">Quantity of The Original Burger</label>
+                                        <input id="quantity-65" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of The Original Burger" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/bacon-cheeseburger.jpg" alt="Bacon Cheeseburger" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Bacon Cheeseburger</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="bacon-cheeseburger-1299" data-name="Bacon Cheeseburger" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Bacon Cheeseburger" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-66">Quantity of Bacon Cheeseburger</label>
+                                        <input id="quantity-66" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Bacon Cheeseburger" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/mushroom-swiss.jpg" alt="Mushroom Swiss Burger" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Mushroom Swiss Burger</h3>
+                                <p class="menu-price">$12.99</p>
+                                <form class="add-to-cart" data-item="mushroom-swiss-burger-1299" data-name="Mushroom Swiss Burger" data-price="1299">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Mushroom Swiss Burger" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-67">Quantity of Mushroom Swiss Burger</label>
+                                        <input id="quantity-67" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Mushroom Swiss Burger" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="desserts">
+                    <h2>Desserts</h2>
+                    <div class="menu-grid">
+                        <article class="menu-card">
+                            <img src="images/tiramisu.avif" alt="Tiramisu" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Tiramisu</h3>
+                                <p class="menu-price">$6.99</p>
+                                <form class="add-to-cart" data-item="tiramisu-699" data-name="Tiramisu" data-price="699">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Tiramisu" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-68">Quantity of Tiramisu</label>
+                                        <input id="quantity-68" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Tiramisu" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/chocolate-mousse.avif" alt="Chocolate Mousse Cake" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Chocolate Mousse Cake</h3>
+                                <p class="menu-price">$7.99</p>
+                                <form class="add-to-cart" data-item="chocolate-mousse-cake-799" data-name="Chocolate Mousse Cake" data-price="799">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Chocolate Mousse Cake" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-69">Quantity of Chocolate Mousse Cake</label>
+                                        <input id="quantity-69" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Chocolate Mousse Cake" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/cheesecake.webp" alt="Cheesecake" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Cheesecake</h3>
+                                <p class="menu-price">$4.99</p>
+                                <form class="add-to-cart" data-item="cheesecake-499" data-name="Cheesecake" data-price="499">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Cheesecake" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-70">Quantity of Cheesecake</label>
+                                        <input id="quantity-70" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Cheesecake" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/cannoli.jpeg" alt="Cannoli" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Cannoli</h3>
+                                <p class="menu-price">$5.99</p>
+                                <form class="add-to-cart" data-item="cannoli-599" data-name="Cannoli" data-price="599">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Cannoli" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-71">Quantity of Cannoli</label>
+                                        <input id="quantity-71" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Cannoli" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="menu-card">
+                            <img src="images/rum-cake.jpg" alt="Italian Rum Cake" loading="lazy">
+                            <div class="menu-card-content">
+                                <h3>Italian Rum Cake</h3>
+                                <p class="menu-price">$7.99</p>
+                                <form class="add-to-cart" data-item="italian-rum-cake-799" data-name="Italian Rum Cake" data-price="799">
+                                    <div class="quantity-control">
+                                        <button class="quantity-minus" type="button" aria-label="Decrease quantity of Italian Rum Cake" data-cart-control disabled>−</button>
+                                        <label class="sr-only" for="quantity-72">Quantity of Italian Rum Cake</label>
+                                        <input id="quantity-72" name="quantity" type="number" min="1" max="99" step="1" value="1" required>
+                                        <button class="quantity-plus" type="button" aria-label="Increase quantity of Italian Rum Cake" data-cart-control disabled>+</button>
+                                    </div>
+                                    <button class="btn btn-green" type="submit" data-cart-control disabled>Add to Cart</button>
+                                </form>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="menu-section" id="bevs">
+                    <h2>Beverages</h2>
+                    <div class="menu-details">
+                        <h3>Soft Drinks</h3>
+                        <p class="muted">Coke, Diet Coke, Sprite, Dr. Pepper, and Root Beer.</p>
+                        <h3>To-Go 2-Liters</h3>
+                        <p class="muted">Coke, Diet Coke, Sprite, and Root Beer.</p>
+                        <h3>Non-Carbonated</h3>
+                        <p class="muted">Coffee, hot tea, decaf coffee, iced tea, sweet tea, orange juice, cranberry juice, and lemonade.</p>
+                        <h3>Red Wine</h3>
+                        <p class="muted">Chianti Frescobaldi, Red Rock Merlot, Sangiovese, Gascon Malbec, Mirassou Pinot Noir, Lambrusco, and Brancaia Tre Toscana.</p>
+                        <h3>White Wine</h3>
+                        <p class="muted">William Hill Chardonnay, Ecco Domani Pinot Grigio, Moscato Allegro, Sauvignon Blanc, White Zinfandel, Prosecco, and Covey Run Riesling.</p>
+                        <p class="muted">Beverages are listed for browsing; prices were not supplied in the original project.</p>
+                    </div>
+                </section>
+            </div>
+            <aside class="cart-panel" id="cart-aside" aria-labelledby="cart-title">
+                <h2 id="cart-title">Your demo cart</h2>
+                <p class="muted" id="cart-empty">Your cart is empty. Add a favorite dish to get started.</p>
+                <ul class="cart-items" id="cart-items" aria-label="Cart items"></ul>
+                <div class="cart-total"><span>Subtotal</span><strong id="total-price">$0.00</strong></div>
+                <p class="muted">Sample prices only. Taxes and fees are not calculated.</p>
+                <button class="btn btn-green" id="purchase" type="button" disabled>Complete Demo Order</button>
+                <p class="cart-message" id="cart-message" role="status" aria-live="polite" aria-atomic="true"></p>
+            </aside>
+        </div>
+        <a class="mobile-cart-link" id="mobile-cart-link" href="#cart-aside" hidden>View demo cart (<span id="cart-count">0</span>)</a>
+    </main>
+    <footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-intro">
+            <img class="footer-logo" src="images/logofoot.png" alt="Roma's Pizza and Italian Restaurant" width="1080" height="458" loading="lazy">
+            <p>Good food. Great company. A little taste of Italy in the heart of Dallas.</p>
+        </div>
+        <div>
+            <h2>Visit Roma's</h2>
+            <address>7033 Greenville Ave.<br>Dallas, TX 75231</address>
+            <a href="https://maps.app.goo.gl/vVY8QDRWaMRh36cW6" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+        </div>
+        <div>
+            <h2>Hours</h2>
+            <p>Tuesday – Sunday<br>10:00 AM – 10:30 PM</p>
+            <p class="closed">Closed on Monday</p>
+        </div>
+        <div>
+            <h2>Keep in touch</h2>
+            <a href="tel:+12143730500">(214) 373-0500</a>
+            <a href="mailto:manager@romasdallas.com">Email Roma's</a>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/romasitaliadallas/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="https://www.facebook.com/RomasDallas" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-bottom">
+        <p>2024 student redesign by Michael Pacheco &amp; Reed Turner · CTEC 4309 Internet Marketing</p>
+        <a href="policy.html">Privacy &amp; project information</a>
+    </div>
+</footer>
+<a class="to-top" href="#top" aria-label="Back to top">↑</a>
+</body>
+</html>

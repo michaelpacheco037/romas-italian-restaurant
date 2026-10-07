@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant contact details, location, and a demonstration inquiry form for the Roma’s student project.">
+    <title>Contact — Roma's Pizza &amp; Italian Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="form.js" defer></script>
+</head>
+<body data-page="contact.html">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header" id="top">
+    <div class="container nav-container">
+        <a class="navbar-brand" href="index.html" aria-label="Roma's Pizza and Italian Restaurant — home">
+            <img src="images/logo.png" alt="Roma's Pizza and Italian Restaurant" width="1080" height="458">
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navigation" aria-expanded="false">
+            <span aria-hidden="true">☰</span> Menu
+        </button>
+        <nav class="navigation" id="navigation" aria-label="Main navigation">
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="promos.html">Promotions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="order" href="order.html">Explore the Menu</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main id="main-content" tabindex="-1">
+
+        <section class="page-hero contact-hero">
+            <div class="container">
+                <p class="eyebrow">Come say hello</p>
+                <h1>There's a place for you here.</h1>
+                <p>Plan a visit, ask about catering, or get in touch.</p>
+            </div>
+        </section>
+        <section class="container section" aria-label="Restaurant information">
+            <div class="contact-cards">
+                <div class="info-card">
+                    <h2>Hours</h2>
+                    <p>Tuesday – Sunday<br><strong>10:00 AM – 10:30 PM</strong></p>
+                    <p class="closed">Closed on Monday</p>
+                </div>
+                <div class="info-card">
+                    <h2>Reach out</h2>
+                    <ul class="contact-links">
+                        <li><a href="tel:+12143730500">(214) 373-0500</a></li>
+                        <li><a href="mailto:manager@romasdallas.com">manager@romasdallas.com</a></li>
+                        <li><a href="https://maps.app.goo.gl/vVY8QDRWaMRh36cW6" target="_blank" rel="noopener noreferrer">7033 Greenville Ave.<br>Dallas, TX 75231 ↗</a></li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h2>Follow along</h2>
+                    <ul class="contact-links">
+                        <li><a href="https://www.instagram.com/romasitaliadallas/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+                        <li><a href="https://www.facebook.com/RomasDallas" target="_blank" rel="noopener noreferrer">Facebook ↗</a></li>
+                        <li><a href="https://www.linkedin.com/company/romaspizzadallas/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+                        <li><a href="https://twitter.com/romasdallas" target="_blank" rel="noopener noreferrer">Twitter / X ↗</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="soft-section section" aria-labelledby="contact-title">
+            <div class="container contact-layout">
+                <div>
+                    <p class="eyebrow">Let's plan something</p>
+                    <h2 id="contact-title">Catering or a special occasion?</h2>
+                    <p class="muted">Try the contact form demo, or use the restaurant's contact links above for a real inquiry.</p>
+                    <iframe class="map-frame" title="Map showing Roma's Pizza and Italian Restaurant in Dallas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11270.991741326021!2d-96.76862973841374!3d32.874734710868836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c20bc20539d65%3A0x6b69d112fef285d7!2sRoma&#39;s%20Pizza%20%26%20Italian%20Restaurant!5e0!3m2!1sen!2sus!4v1712776834299!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+                <div class="form-wrapper">
+                    <!-- Demo fields omit name attributes so entered details stay out of the confirmation URL. -->
+                    <form id="contact-form" class="contact-form" action="message.html" method="get">
+                        <p class="demo-note" id="form-note">This is a demo form. Your message will not be saved or sent to the restaurant.</p>
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" autocomplete="name" maxlength="100" placeholder="Your name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Phone <span class="optional">(optional)</span></label>
+                            <input id="phone" type="tel" autocomplete="tel" maxlength="25" placeholder="(214) 555-0123" aria-describedby="phone-help">
+                            <small id="phone-help">Use a 10-digit US number; a leading +1 is okay.</small>
+                        </div>
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" maxlength="5000" placeholder="Tell us about your event or question…" required></textarea>
+                        </div>
+                        <button class="btn btn-green" type="submit" aria-describedby="form-note">Submit Demo Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-intro">
+            <img class="footer-logo" src="images/logofoot.png" alt="Roma's Pizza and Italian Restaurant" width="1080" height="458" loading="lazy">
+            <p>Good food. Great company. A little taste of Italy in the heart of Dallas.</p>
+        </div>
+        <div>
+            <h2>Visit Roma's</h2>
+            <address>7033 Greenville Ave.<br>Dallas, TX 75231</address>
+            <a href="https://maps.app.goo.gl/vVY8QDRWaMRh36cW6" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+        </div>
+        <div>
+            <h2>Hours</h2>
+            <p>Tuesday – Sunday<br>10:00 AM – 10:30 PM</p>
+            <p class="closed">Closed on Monday</p>
+        </div>
+        <div>
+            <h2>Keep in touch</h2>
+            <a href="tel:+12143730500">(214) 373-0500</a>
+            <a href="mailto:manager@romasdallas.com">Email Roma's</a>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/romasitaliadallas/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="https://www.facebook.com/RomasDallas" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-bottom">
+        <p>2024 student redesign by Michael Pacheco &amp; Reed Turner · CTEC 4309 Internet Marketing</p>
+        <a href="policy.html">Privacy &amp; project information</a>
+    </div>
+</footer>
+<a class="to-top" href="#top" aria-label="Back to top">↑</a>
+</body>
+</html>
